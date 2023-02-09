@@ -406,6 +406,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5d7f63ef-d018-4e64-a5f4-29f363ae71d8)
   )
+  (label "test" (at 74.93 66.04 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid cef881e8-a9fd-4dc3-a479-ee3ee6611a46)
+  )
 
   (symbol (lib_id "pspice:OPAMP") (at 66.04 43.18 0) (unit 1)
     (in_bom yes) (on_board yes)
