@@ -2424,7 +2424,7 @@
     (uuid 0453f108-7dce-491b-878b-92849be18fad)
     (property "Reference" "RV1" (id 0) (at 45.72 133.35 90))
     (property "Value" "100k" (id 1) (at 45.72 135.89 90))
-    (property "Footprint" "" (id 2) (at 45.72 139.7 0)
+    (property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" (id 2) (at 45.72 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 45.72 139.7 0)
@@ -3470,7 +3470,7 @@
       (reference "R7") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/0453f108-7dce-491b-878b-92849be18fad"
-      (reference "RV1") (unit 1) (value "100k") (footprint "")
+      (reference "RV1") (unit 1) (value "100k") (footprint "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical")
     )
     (path "/20935cf2-ab8a-474f-bf12-ce3a5ccf7d28"
       (reference "U2") (unit 1) (value "MAX14872ETC+") (footprint "SON50P300X300X80-13N")
