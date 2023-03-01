@@ -3414,10 +3414,7 @@
   (segment (start 229.1 119.45) (end 229.1 114.8) (width 0.25) (layer "F.Cu") (net 11) (tstamp d4cb34fa-d355-4568-9155-3c567927731a))
   (segment (start 250.3 113.3) (end 236.85 113.3) (width 0.25) (layer "F.Cu") (net 11) (tstamp df9d158f-b58a-45bb-a596-4739f2569723))
   (segment (start 236.85 113.3) (end 236.525 112.975) (width 0.25) (layer "F.Cu") (net 11) (tstamp dfd9ca08-e80c-40b7-8f08-067fd169e60a))
-  (segment (start 228.225 95.25) (end 240.575 82.9) (width 0.25) (layer "F.Cu") (net 13) (tstamp 3293937a-c465-46c1-86c4-8db37dfc3004))
   (segment (start 240.575 82.9) (end 240.575 82.35) (width 0.25) (layer "F.Cu") (net 13) (tstamp 9d062ee2-b337-45a8-9f7c-962500407924))
-  (segment (start 228.225 95.25) (end 230.615 95.25) (width 0.25) (layer "F.Cu") (net 13) (tstamp b4f2bcfe-69cd-43c7-9f29-dc726c6e1049))
-  (segment (start 230.615 95.25) (end 240.575 105.21) (width 0.25) (layer "F.Cu") (net 13) (tstamp bb530ddf-ee52-4325-9ab8-a4b5161579a5))
 
   (zone (net 3) (net_name "GND") (layers F&B.Cu) (tstamp 3af46996-bd31-4100-8057-61a09bec8303) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
