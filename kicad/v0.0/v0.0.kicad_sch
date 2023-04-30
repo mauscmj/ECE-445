@@ -2264,7 +2264,7 @@
     (effects (font (size 3 3)) (justify left bottom))
     (uuid 410b2509-3c89-474d-85df-4b7ce4f2018b)
   )
-  (text "POWER MANAGEMENT V1" (at 212.725 19.05 0)
+  (text "POWER MANAGEMENT" (at 215.646 18.288 0)
     (effects (font (size 3 3)) (justify left bottom))
     (uuid 563be16a-33e3-4f93-a9bc-4be70bdfadbd)
   )
