@@ -13,7 +13,7 @@
 - [4/16/2023](#testing-and-verification)
 - [4/17/2023](#mock-demo)
 - [4/24/2023](#pcb-integration-and-final-demo)
-- [5/1/2023](#final presentation)
+- [5/1/2023](#final-presentation)
 
 ## Project Proposal Notes
 List of ideas that we have brainstormed:
