@@ -115,7 +115,7 @@
 - Built frame and physical board for curtain and got it mounted (Vinay)
 - Tested LED strip with 9V
 - PCB not functional, need to wait for second round to test
-<img src="blind_mount.jpg" alt= “” width="50%" height="50%">
+<img src="blind_mounted.jpg" alt= “” width="50%" height="50%">
 <img src="led_test.jpg" alt= “” width="50%" height="50%">
 
 
