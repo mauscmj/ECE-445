@@ -112,7 +112,7 @@
 - Might need different motor controller for sake of soldering
 
 # 2023-03-27 - Testing Parts
-- Built frame and physical board for curtain and got it mounted
+- Built frame and physical board for curtain and got it mounted (Vinay)
 - Tested LED strip with 9V
 - PCB not functional, need to wait for second round to test
 <img src="blind_mount.jpg" alt= “” width="50%" height="50%">
@@ -124,17 +124,99 @@
 - LED MOSFET test is failure, 5V signal won't cause MOSFET to drain power to LED
 - Maybe a bad MOSFET?
 - Need to reexamine MOSFET circuit
-- Motor controller test is a failure, voltage reading across FWD and REV but no motor turn?
-- Circuit diagram may be wrong? VDD and VM should be the same?
 - Motor turns with minimum 5V directly from power supply
 - Able to generate digital signals from ESP8266 successfully.
-- Able to read analog signal from ESP8266 successfully.
+- Able to read [analog signal](https://docs.espressif.com/projects/esp-idf/en/v4.4/esp32/api-reference/peripherals/adc.html#:~:text=The%20ESP32%20ADCs%20can%20measure,being%20input%20to%20the%20ADCs.) from ESP8266 successfully with generated signal.
+- May have broke ESP8266, too much power into input pin
 
-# 2023-04-12 - Testing Second Round PCB
+# 2023-04-12/13/14 - Testing Second Round PCB pt.1
+## 04/12
+- 3d printed motor shaft connector arrived
+- Mounted motor onto board (Vinay) 
+<img src="motor_attachment.jpg" alt= “” width="50%" height="50%">
+<img src="motor_mount.jpg" alt= “” width="50%" height="50%">
+- ESP32 soldered chip on PCB not working, bad connections?
+	- Added solder to power connection and now seems to be getting power, unable to program though.
+	- Pins for flashing not soldered well, non responsive ESP32
+- Photo resistor voltage not changing, stays constant no matter the lighting
+	- Need to change resistor values, test on bread board
+- Motor controller test is a failure, voltage reading across FWD and REV but no motor turn.
+- MOSFET circuit for LED also not working, when gate is high still no voltage across the LEDs.
+	- Common drain vs Common source? Try changing to common drain on bread board.
+- Plan to use ESP8266 and breadboard for demo, get working on breadboard.
 
-- 
+## 04/13
+- Fixed LED MOSFET circuit on breadboard, use [common drain](https://en.wikipedia.org/wiki/Common_drain) schematic
+- MOSFET gives LED power when gate is low.
+- Motor controller schematic wrong? Find difference between VDD, VM and VGS.
+- Should VGS be 9V too?
+- Documentation of motor controller unclear, going to try different motor controller on bread board
+## 04/14
+- Made photoresistor circuit on breadboard
+- Got circuit working using 3.3 K&#937; for resistor value
+- Range of 0.37 V - 1.94 V across the photoresistor for low to high levels of light
+- Able to read analog value from photoresistor with ESP8266 using [ADC](https://esp32io.com/tutorials/esp32-light-sensor), gives a value from 0-1023 in the code.
+- Button circuit works on bread board and can be read through the ESP8266
+- Think we burned out ESP8266
+- Switched to [L293D](https://lastminuteengineers.com/l293d-dc-motor-arduino-tutorial/) motor controller... had one from previous class
+- L293D motor controller works on breadboard (Jack)
+- Jack will put circuit together with all components on bread board to test with blinds for tomorrow
+
+# 2023-04-15 - Testing Bread board pt 1.
+
+<img src="breadboard.jpg" alt= “” width="50%" height="50%">
+
+-	Connected bread board to mounted motor
+-	Able to drive motor using basic code
+	-	Need to test PWM generation from ESP8266
+-	Motor able to lift blinds but getting froze up sometimes
+-	Switched to PWM and cut weight off bottom of the curtain
+	-	Taped quarters to bottom to pull blinds down
+-	Motor now able to raise and lower curtain
+-	Able to read encoder in ESP32 console
+-	Test button input
+	-	Button input works but need to write logic to read in value and store it before button is [unpressed](https://esp32io.com/tutorials/esp32-button)
+	-	Finished method for reading button to toggle global Boolean when button is pressed
 
 
+# 2023-04-16 - Testing Bread board pt 2.
+- Need to test reading photoresistor input
+	- Unable to read photoresistor, logging all 0s, Software or hardware problem?
+	- Used multimeter to check voltage across photoresistor, hardware is fine.
+- Using wrong port to read in photoresistor, can't use ADC channel 2 pins because they are used for [wifi capabilities](https://github.com/espressif/arduino-esp32/issues/440)
+- Switched to ADC channel 1 port, successfully able to read photoresistor value into code.
+- LED strip able to turn on using digital signal, need to find light threshold for photoresistor.
+- ESP32 stopped working..... amazon order in bound
+- Team decided to order our own PCB from a separate website using ESP32 DevKit instead to have functioning PCB by the demo, unable to solder and test ESP32 chip in time.
+# 2023-04-17 - Testing Bread board pt 2.
+- Found lighting range for photoresistor, should turn lights on around 300 (0-1023). May need to change depending on the setting for demo
+- Need to combine all of the testing code and test Apple HomeKit
+- Unable to use same library as testing for Apple HomeKit because we switched to ESP32 instead of ESP8266.
+	- Using [this](https://github.com/Yurik72/ESPHap) library instead, will have to retest
+	- Able to create a basic Apple HomeKit device again similar to the first test... Now apply to my current code
+	- Created basic smart window blind device, reads 0-100% into code when slider is adjusted
+- Combined testing code with Apple HomeKit Code, need to create method to move motor based on the 0-100% input
+	- Found encoder bounds for lowering and raising the curtains, will start curtains in the open position to be encoder 0 point. Lowering the curtains will reach an encoder value of -900. 
+	- Encoder value: 0 = OPEN
+	- Encoder value: -900 = CLOSED
+- Created method to rotate to a given position and then stop.
+	- Will feed the method Input Percentage * -900 to calculate position to rotate to.
+- Rotate method works with test values, now will test with values read in from Apple HomeKit
+	- Method WORKS!!! Responds to the users input and rotates to correct position, then stops.
+- Need to add logic to turn on LED when curtains are open and photoresistor value < threshold.
+	- Logic added and works, LED only turns on when encoder value $\approx$ 0 and photoresitor value $\leq$ 300.
+- Added edge case logic for button to figure out whether to rotate to open or close depending on the current state.
+- Tested connecting and controlling using test router, and WORKS!! 
+- Breadboard testing finished, code is fully functioning for mock demo.
+- Also tested alarm home automation, and it also worked!
+- Now just waiting for new PCB to come in.
+<img src="working_breadboard.jpg" alt= “” width="50%" height="50%">
 
+
+# 2023-04-19 - TA Mock Demo
+- Have a good introduction
+- Practice demo beforehand
+- Use alarm as demonstration for functionality
+- Problems faced, solutions, R&V tables for subsystems
 
 
