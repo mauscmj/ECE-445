@@ -41,8 +41,8 @@ UPDATE: Smart Curtains got **approved** by TA under one condition: that we add a
 
 Some initial sketches of our Smart Curtains Project:
 
-![Drawing of Idea] (initialsketch1.png)
-![Drawing of Idea] (initialsketch2.png)
+![Drawing of Idea](initialsketch1.png)
+![Drawing of Idea](initialsketch2.png)
 
 ## Design Doc Meeting Notes
 For the design doc on top of the proposal we need to add:
@@ -77,8 +77,8 @@ UPDATE: Switching to 9V circuit wall mount instead of battery powered LiPo 5V ci
 UPDATE: We have decided to use ESP8266 as our microcontroller chip.
 
 Some Images of Physical Design CAD:
-![Physical Design] (frontview.jpg)
-![Physical Design] (backview.jpg)
+![Physical Design](frontview.jpg)
+![Physical Design](backview.jpg)
 
 ## Design Review Notes
 
@@ -157,7 +157,7 @@ The following is an image of the setup:
 Note: Other stuff accomplished with Max include: testing LED strip with 9V. 
 
 The following is an image of testing LEDS:
-![LED test] (led_test.jpg)
+![LED test](led_test.jpg)
 
 Note: Unfortunately PCB is not working gotta wait for next round.
 
@@ -184,9 +184,9 @@ Note: Part fits pretty well into the gear hole and effectively rolls/unrolls the
 
 Note: The motors static friction is surprisingly strong and can hold the curtain up pretty well.
 
-![Motor piece] (motor_attachment.jpg)
-![Motor mount] (motor_mounted.jpg)
-![Motor piece] (piece.gif)
+![Motor piece](motor_attachment.jpg)
+![Motor mount](motor_mounted.jpg)
+![Motor piece](piece.gif)
 
 ## 2nd round PCB test
 
