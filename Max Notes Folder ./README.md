@@ -1,6 +1,6 @@
 # Alex Worklog
 
-[[_TOC_]]
+[_TOC_]
 
 # 2021-02-05 - Discussion with Professor Schuh
 
