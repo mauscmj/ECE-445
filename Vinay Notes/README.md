@@ -152,7 +152,7 @@ UPDATE: Everything is attached and looks pretty good! The excess nail poking out
 
 The following is an image of the setup:
 
-![Demo Board Setup] (boardsetup.jpg)
+![Demo Board Setup](boardsetup.jpg)
 
 Note: Other stuff accomplished with Max include: testing LED strip with 9V. 
 
