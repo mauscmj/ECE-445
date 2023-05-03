@@ -1,6 +1,14 @@
 # Alex Worklog
 
-[_TOC_]
+- [Alex Worklog](#alex-worklog)
+- [2021-02-05 - Discussion with Professor Schuh](#2021-02-05---discussion-with-professor-schuh)
+- [2021-02-10 - Parts Updates](#2021-02-10---parts-updates)
+- [2021-02-12 - Acquiring a Battery](#2021-02-12---acquiring-a-battery)
+- [2021-02-18 - Battery Update](#2021-02-18---battery-update)
+- [2021-02-24 - Investigation acquiring RPM data from VESCs](#2021-02-24---investigation-acquiring-rpm-data-from-vescs)
+- [2021-03-01 - Parts update](#2021-03-01---parts-update)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 # 2021-02-05 - Discussion with Professor Schuh
 
