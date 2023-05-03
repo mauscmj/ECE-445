@@ -67,8 +67,8 @@
 	- Need to download [drivers](https://cityos-air.readme.io/docs/1-usb-drivers-for-nodemcu-v10) to do so FYI
 - Got ESP8266 to connect to local network
 - Got basic Apple HomeKit LED to work using this [library](https://github.com/Mixiaoxiao/Arduino-HomeKit-ESP8266) and the on board LED
-![](esp_homekit1.jpg)
-![](esp_homekit2.jpg)
+<img src="esp_homekit1.jpg" alt= “” width="50%" height="50%">
+<img src="esp_homekit2.jpg" alt= “” width="50%" height="50%">
 
 ## Todo List
 - Finish up design doc
