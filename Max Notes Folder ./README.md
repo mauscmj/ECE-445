@@ -93,7 +93,7 @@
 - Jack finished circuit diagrams
 - Finished laying out PCB together
 - Jack will put order in tonight
-![](first_pcb.jpg) 
+<img src="first_pcb.jpg" alt= “” width="50%" height="50%">
 ## Todo List
 - Teammate Evaluation
 - Get part order in
