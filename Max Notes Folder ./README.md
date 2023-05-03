@@ -1,91 +1,99 @@
-# Alex Worklog
 
-- [Alex Worklog](#alex-worklog)
-- [2021-02-05 - Discussion with Professor Schuh](#2021-02-05---discussion-with-professor-schuh)
-- [2021-02-10 - Parts Updates](#2021-02-10---parts-updates)
-- [2021-02-12 - Acquiring a Battery](#2021-02-12---acquiring-a-battery)
-- [2021-02-18 - Battery Update](#2021-02-18---battery-update)
-- [2021-02-24 - Investigation acquiring RPM data from VESCs](#2021-02-24---investigation-acquiring-rpm-data-from-vescs)
-- [2021-03-01 - Parts update](#2021-03-01---parts-update)
+# Max Worklog
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+# 2023-02-07 - Proposal TA Meeting
+-   It was suggested that voltages be put on block diagrams to ensure clarity in the design process.
+-   Research on the HomeKit chip was discussed. A chip was needed that supports WIFI, HomeKit, and has enough I/O ports for other subsystems.
+-   It was noted that we needed to determine the number of I/O ports that would be needed for the project.
+-   It was emphasized that the chip should be given the correct power to avoid any potential issues.
+-   Safety and tolerance analysis were discussed for proposal.
+-   It was suggested that circuit diagrams should be started to provide a more detailed look at the system.
+-  Need to get proposal submitted
+-  Meet weekly Wednesday from 2-3pm
 
-# 2021-02-05 - Discussion with Professor Schuh
+# 2023-02-15 - TA Meeting #1
 
-Professor Schuh gave us the idea to use piezo resistors or Velostat to perform the weight/pressure sensing that we need. Additionally, the tilt sensing probably won’t be necessary - we can correspond the rear left wheel with the front left wheel and rear right wheel with the front right wheel, as those pairs of wheels should be spinning at roughly the same velocity during turning. This simplifies our design.
-
-# 2021-02-10 - Parts Updates
-
-Currently, I am looking at Dual VESC options that can simplify our design, minimize space.
-Here are some examples:
-
-![](esc1.png)
-
-[link](https://flipsky.net/collections/electronic-products/products/dual-fsesc6-6-based-upon-vesc6-with-aluminum-heatsink)
-
-This one has dual MCUs, with a physical switch to include or disclude the CAN connection
-between both of the VESCs.
-
-![](esc2.png)
-
-[link](https://massivestator.com/products/focbox-unity-dual-motor-controller)
-
-This one has a single MCU that acts for both motors.
-
-I am currently speaking with Loaded Boards, a longboard deck and skateboard wheel company that Boosted had a business relationship with. They are willing to send a B-grade deck and wheels at a lower price. Wheel durometer options are 77a, 80a, 83a. The lower the durometer number, the softer the
-wheel urethane.
-
-After discussions with the team, we decided on the hardest wheel option, 83a, as it would slip easier than the softer wheels. We want to make sure we can demonstrate traction control in our project.
-
-For weight sensing, I also came across a flexiforce sensor that we may consider using. The board will weigh about 20 pounds, we ideally would like a range of double that. This flexiforce sensor is high on my list.
-
-![](flexiforce.png)
-
-[link](https://www.tekscan.com/products-solutions/force-sensors/a401?tab=specifications-performance)
-
-# 2021-02-12 - Acquiring a Battery
-
-I have contacted several custom battery builders in the esk8 (custom electric longboard builders) forum, located [here](https://forum.esk8.news/).  Builder Zach Tetra from [Black Fox Builds](https://forum.esk8.news/t/black-fox-boards-east-coast-battery-building-services/37402) has the following pair of 6s4p batteries that he can send immediately:
-
-![](blackfox_battery.png)
-
-For our project, I would prefer a 12s battery for adequate performance. The pack above is made up of Samsung 30Q cells, I found more info [here](https://lygte-info.dk/review/batteries2012/Samsung%20INR18650-30Q%203000mAh%20(Pink)%20UK.html). We can convert the 6s4p pack into a 12s2p pack, which will be nearly 200Whr.
-This will be plenty, for up to 10 miles of range. I have never worked on batteries before. When researching how to do so, I found this over-an-hour-long video [here]( https://www.youtube.com/watch?v=7QjO90LG67g), that clearly depicts and describes everything required to safely build a reliable battery pack.
-
-I will need access to a spot welder to complete this - we’ve reached out to Illini Solar Car, as they have claimed the spot welder on campus.
-
-# 2021-02-18 - Battery Update
-
-Received the pair of 6s4p batteries, along with battery building supplies such as a Smart BMS, nickel strips, fishpaper, 10 gauge wire, and more. Upon closer inspection, splitting the 6s4p pack into a 12s2p pack is difficult, as there is no leverage to remove the existing H-shaped nickel strips.
-
-The pair of 6s4p packs take up a lot less space than I expected. It would be easier to make a 12s4p pack out of them instead, which will provide us the same power as I required from earlier at nearly 500 Whr. Additionally, I have gotten in contact with a coworker who has a battery spot welder I can use.
-
-Once I have planned out the build and assembled the materials, we should be good to go to complete the battery.
-
-# 2021-02-24 - Investigation acquiring RPM data from VESCs
-
-I have done some investigating of the VESC hardware and software and discovered that you can query them for RPM telemetry data. This removes the need for us to develop RPM sensing
-around the motorized wheels.
-
-To accomplish this however, we may need to talk to each VESC individually. Having a dual VESC is convenient, but this may interfere with our ability to query data from them properly. Some dual VESCs have dual MCUs, other more recent designs have single MCUs as shown earlier in this journal.
-
-# 2021-03-01 - Parts update
-
-From further discussions about the issue of communicating to both VESCs individually or to a ‘master’ VESC to both, we have decided to go with a pair of single VESCs. For example, we could attach a CANBUS cable between the pair of VESCs in order to allow them to communicate with each other, or simply split two PPM signals to pass throttle information individually, among various other choices. In other words, the VESCs can work in tandem with one another or can be independent from each other.
-
-I have assembled a significant portion of the board at this point, as seen here in this picture below:
-
-![](parts_update.png)
-
-Some issues:
-
-- The motor pulley is scraping on the motor mount. This is an issue of tolerances, as the
-motor mount I am using is 6mm wide and the Motor shaft has a tolerance of 6.2mm +-
-0.5mm. In theory, we should have 0.2mm of space, but the margin of error was not in our
-favor.
-  ![](motor_pulley_scraping.png)
-- The threads on the ends of the trucks are not deep enough. We need bearing spacers to
-push the wheel out.
-  ![](bearing_spacer.png)
   
+
+-   The need to have a capable micro controller on the PCB for the new project was emphasized.
+-   It was suggested that motor controllers be included on the same PCB.
+-   The motor controllers could be controlled by the processor on the same PCB.
+-   A photoresistor was suggested as an input for the microcontroller to allow the system to react to changes in the surrounding environment.
+-   The microcontroller's output could be connected to an LED driver to provide visual feedback to the user.
+- Need to decide on using Lipo battery or wall plug in for power. Leaning toward battery for portability
+- PCB can be 100 x 100 mm
+- Need to pick out micro controller (MAKE SURE IT HAS ENOUGH INPUT/OUTPUT PINS)
+- Get moving on the design doc, need to make block diagram more specific.
+
   
+# 2023-02-20 - Team Work
+- Got parts picked out for motor, motor controller, blinds
+- Need to decide if encoder is needed for functionality
+- How many pins would encoder add?
+- Finished R&V Tables
+
+## Design Doc Todo List
+- Circuit Diagrams
+- Labor costs
+- Time Table
+- Hardware design choices
+- Software design choices
+- Physical design schematics
+
+
+# 2023-02-22 - TA Meeting #2
+
+  
+-   The revised proposal must be submitted by Thursday.
+-   It was suggested to label the lines on the block diagram to improve readability.
+-   More quantitative requirements are needed for the project.
+-   The ESP8266 was chosen as the microcontroller because Jack found some laying around. They have wifi capabilities. Max will test them out
+-   Footprints for the components need to be found, and the PCB layout needs to be designed.
+-   Only orders through Digikey will be accepted, no orders through Walmart or Amazon.
+-   Jack will get the PCB reviewed on Monday.
+
+## Todo list
+-   Submit the revised proposal by Thursday.
+-   Label the lines on the block diagram for improved readability.
+-   Develop more quantitative requirements for the project.
+-   Find footprints for the components and design the PCB layout.
+-   Submit part orders through Digikey.
+-   Jack to get the PCB reviewed on Monday.
+  
+# 2023-02-22 - Individual Work
+- Worked on design doc
+- Decided to switch to outlet for 9v power instead of Lipo battery for simplicity (team decision)
+- Got ESP8266 to flash correctly
+	- Need to download [drivers](https://cityos-air.readme.io/docs/1-usb-drivers-for-nodemcu-v10) to do so FYI
+- Got ESP8266 to connect to local network
+- Got basic Apple HomeKit LED to work using this [library](https://github.com/Mixiaoxiao/Arduino-HomeKit-ESP8266) and the on board LED
+![](esp_homekit1.jpg)
+![](esp_homekit2.jpg)
+
+## Todo List
+- Finish up design doc
+	- Cost
+	- Hardware Decisions
+	- Formatting (Vinay) 
+- Start Team contract
+
+
+# 2023-02-27 - Head TA Notes
+
+- Switch from ESP8266 to [ESP32](https://www.espressif.com/en/products/modules/esp32) for more pins
+ - Generate [PWM](https://randomnerdtutorials.com/esp32-pwm-arduino-ide/) using software with ESP32 instead of hardware
+ - ESP32 should have dedicated pins for this
+ - Figure out pins for programming ESP32 (Jack + Max)
+ - Design usb to uart for programming (Jack)
+ - Can't use dev kit for ESP32, need to make diagram for the chip and programmer
+ - Make sure we add test points to PCB
+ - Don't need 5V line anymore so need to find 9V LED strip instead (Vinay)
+  
+# 2023-03-06 - Max + Jack Work
+- Jack finished circuit diagrams
+- Finished laying out PCB together
+- Jack will put order in tonight
+![](first_pcb.jpg) 
+## Todo List
+- Teammate Evaluation
+- Get part order in
