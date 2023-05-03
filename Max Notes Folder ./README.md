@@ -92,8 +92,49 @@
 # 2023-03-06 - Max + Jack Work
 - Jack finished circuit diagrams
 - Finished laying out PCB together
-- Jack will put order in tonight
+- Got errors with DRC, clearance violations mostly from small pads close together
+- Fixed clearance by modifying clearance constraints for those parts specifically
+- Also can't fit thick tracers into some small pads because too close together
+- Might have trouble soldering small pads, will see when parts arrive
+- Jack will put PCB order in tonight
+- Need to design enclosure for PCB (Vinay)
 <img src="first_pcb.jpg" alt= “” width="50%" height="50%">
 ## Todo List
 - Teammate Evaluation
 - Get part order in
+- Wait for PCB...
+# 2023-03-08 - TA Meeting #3
+- Space out our PCB board more, no need to optimize yet
+- Maybe use 6 pin connector to program instead of USB?
+- Put resistors horizontal and capacitors vertical
+- Design Doc regrade due 3/24
+- Check current ratings for motor
+- Might need different motor controller for sake of soldering
+
+# 2023-03-27 - Testing Parts
+- Built frame and physical board for curtain and got it mounted
+- Tested LED strip with 9V
+- PCB not functional, need to wait for second round to test
+<img src="blind_mount.jpg" alt= “” width="50%" height="50%">
+<img src="led_test.jpg" alt= “” width="50%" height="50%">
+
+
+# 2023-04-04 - Testing Parts
+
+- LED MOSFET test is failure, 5V signal won't cause MOSFET to drain power to LED
+- Maybe a bad MOSFET?
+- Need to reexamine MOSFET circuit
+- Motor controller test is a failure, voltage reading across FWD and REV but no motor turn?
+- Circuit diagram may be wrong? VDD and VM should be the same?
+- Motor turns with minimum 5V directly from power supply
+- Able to generate digital signals from ESP8266 successfully.
+- Able to read analog signal from ESP8266 successfully.
+
+# 2023-04-12 - Testing Second Round PCB
+
+- 
+
+
+
+
+
