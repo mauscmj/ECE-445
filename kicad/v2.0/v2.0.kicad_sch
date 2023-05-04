@@ -1929,7 +1929,7 @@
     (effects (font (size 3 3)) (justify left bottom))
     (uuid 563be16a-33e3-4f93-a9bc-4be70bdfadbd)
   )
-  (text "DEV BOARD" (at 185.166 22.86 0)
+  (text "DEV BOARD" (at 182.372 27.178 0)
     (effects (font (size 5 5)) (justify left bottom))
     (uuid 8042090d-6323-4a41-8650-cf750c9a6d86)
   )
