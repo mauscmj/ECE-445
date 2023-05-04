@@ -1,6 +1,25 @@
 
 # Max Worklog
 
+# Table of Contents
+- [2023-02-07 - Proposal TA Meeting](#2023-02-07---proposal-ta-meeting)
+- [2023-02-15 - TA Meeting #1](#2023-02-15---ta-meeting--1)
+- [2023-02-20 - Team Work](#2023-02-20---team-work)
+- [2023-02-22 - TA Meeting #2](#2023-02-22---ta-meeting--2)
+- [2023-02-22 - Individual Work](#2023-02-22---individual-work)
+- [2023-02-27 - Head TA Notes](#2023-02-27---head-ta-notes)
+- [2023-03-06 - Max + Jack Work](#2023-03-06---max---jack-work)
+- [2023-03-08 - TA Meeting #3](#2023-03-08---ta-meeting--3)
+- [2023-03-27 - Testing Parts](#2023-03-27---testing-parts)
+- [2023-04-04 - Testing Parts](#2023-04-04---testing-parts)
+- [2023-04-12/13/14 - Testing Second Round PCB pt.1](#2023-04-12-13-14---testing-second-round-pcb-pt1)
+- [2023-04-15 - Testing Bread board pt 1.](#2023-04-15---testing-bread-board-pt-1)
+- [2023-04-16 - Testing Bread board pt 2.](#2023-04-16---testing-bread-board-pt-2)
+- [2023-04-17 - Testing Bread board pt 2.](#2023-04-17---testing-bread-board-pt-2)
+- [2023-04-19 - TA Mock Demo](#2023-04-19---ta-mock-demo)
+- [2023-04-24 - Final PCB Arrives](#2023-04-24---final-pcb-arrives)
+- [2023-04-24 - Pre Demo Testing](#2023-04-24---pre-demo-testing)
+
 # 2023-02-07 - Proposal TA Meeting
 -   It was suggested that voltages be put on block diagrams to ensure clarity in the design process.
 -   Research on the HomeKit chip was discussed. A chip was needed that supports WIFI, HomeKit, and has enough I/O ports for other subsystems.
@@ -134,7 +153,7 @@
 - 3d printed motor shaft connector arrived
 - Mounted motor onto board (Vinay) 
 <img src="motor_attachment.jpg" alt= “” width="50%" height="50%">
-<img src="motor_mounted.jpg" alt= “” width="50%" height="50%">
+<img src="motor_mount.jpg" alt= “” width="50%" height="50%">
 - ESP32 soldered chip on PCB not working, bad connections?
 	- Added solder to power connection and now seems to be getting power, unable to program though.
 	- Pins for flashing not soldered well, non responsive ESP32
@@ -219,4 +238,28 @@
 - Use alarm as demonstration for functionality
 - Problems faced, solutions, R&V tables for subsystems
 
-
+# 2023-04-24 - Final PCB Arrives
+- Jack soldered components onto PCB, just need to flash ESP32 board and test
+- Testing PCB
+	- Everything fully functioning except for photoresistor circuit. 
+	- Same mistake as before, need to use ADC channel 1 instead of channel 2
+- Changed input pin for photoresistor and values are now being read in!
+- PCB FULLY FUNCTIONING!!
+## Final Todo List
+- Crimp wire connectors
+- Mount PCB on Board
+- Assemble PCB enclosure
+# 2023-04-25 - Pre Demo Testing
+- Mounted PCB onto board
+- Assembled PCB enclosure using hot glue and board cut outs
+- Crimped wires for connectors
+	- Had to add hot glue to motor connector to keep wires in place
+- Photoresistor readings stopped working, did we burn ESP32?
+	- Voltage still correct across photoresistor, must be ESP32 problem
+	- Replaced ESP32 with new one, fixed the problem
+- Need to adjust LED light threshold for activation, lab is much brighter than testing room
+	- Changed lighting threshold from $\leq$ 300 to $\leq$ 500 to power on LED.
+- PROJECT DONE!
+- Final board:
+<img src="final_board.jpg" alt= “” width="50%" height="50%">
+<img src="final_pcb.jpg" alt= “” width="50%" height="50%">
