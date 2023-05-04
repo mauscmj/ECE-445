@@ -153,7 +153,7 @@
 - 3d printed motor shaft connector arrived
 - Mounted motor onto board (Vinay) 
 <img src="motor_attachment.jpg" alt= “” width="50%" height="50%">
-<img src="motor_mount.jpg" alt= “” width="50%" height="50%">
+<img src="motor_mounted.jpg" alt= “” width="50%" height="50%">
 - ESP32 soldered chip on PCB not working, bad connections?
 	- Added solder to power connection and now seems to be getting power, unable to program though.
 	- Pins for flashing not soldered well, non responsive ESP32
