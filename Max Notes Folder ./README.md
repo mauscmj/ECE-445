@@ -15,7 +15,7 @@
 - [2023-04-12/13/14 - Testing Second Round PCB pt.1](#2023-04-12-13-14---testing-second-round-pcb-pt1)
 - [2023-04-15 - Testing Bread board pt 1.](#2023-04-15---testing-bread-board-pt-1)
 - [2023-04-16 - Testing Bread board pt 2.](#2023-04-16---testing-bread-board-pt-2)
-- [2023-04-17 - Testing Bread board pt 2.](#2023-04-17---testing-bread-board-pt-2)
+- [2023-04-17 - Testing Bread board pt 3.](#2023-04-17---testing-bread-board-pt-3)
 - [2023-04-19 - TA Mock Demo](#2023-04-19---ta-mock-demo)
 - [2023-04-24 - Final PCB Arrives](#2023-04-24---final-pcb-arrives)
 - [2023-04-25 - Pre Demo Testing](#2023-04-25---pre-demo-testing)
@@ -207,7 +207,7 @@
 - LED strip able to turn on using digital signal, need to find light threshold for photoresistor.
 - ESP32 stopped working..... amazon order in bound
 - Team decided to order our own PCB from a separate website using ESP32 DevKit instead to have functioning PCB by the demo, unable to solder and test ESP32 chip in time.
-# 2023-04-17 - Testing Bread board pt 2.
+# 2023-04-17 - Testing Bread board pt 3.
 - Found lighting range for photoresistor, should turn lights on around 300 (0-1023). May need to change depending on the setting for demo
 - Need to combine all of the testing code and test Apple HomeKit
 - Unable to use same library as testing for Apple HomeKit because we switched to ESP32 instead of ESP8266.
