@@ -210,4 +210,26 @@ Note: New plan is to use ESP8266 and breadboard for demo, aim to get it working 
 
 ## Breadboarding Circuit and Programming Microcontroller
 
-Note:
+Note: We redid the LED MOSFET circuit from scratch on the breadboard with a true 9V source as well. It worked using the common drain schematic.
+
+Note: We are excited that the LED circuit works powering it with 2nd round PCB barrel jack piece. We will now try salvaging the motor controller on the PCB.
+
+Note: Unfortunately its not working even though we are getting the right voltages at individual testpoints.
+
+Note: Look like we will have to scrap this PCB. The motor controller datasheet is confusing. Im going to order another motor controller ASAP. The L293D through hole mount looks good (Half-H Drivers).
+
+Note: Jack got the photoresistor circuit to work on the breadboard. Thats good progress
+
+Note: We are playing aroud with resistor values at the moment. Seems like 3.3 kilo ohms is the optimal value for it. We get a nice large range of 1.94V - 0.37V for uncovered to fully covered photoresistor respectively.
+
+Note: Testing the serial monitor output from the photoresistor value also seems to work.
+
+Note: Button circuit was simple according to Jack. He fixed it up really quick and we were able to test it instantly. Works perfect.
+
+Note: L293D motor controller works! We picked up the order today and it was much simpler to follow.
+
+Note: Was able to test with manual power but not necessarily with the ESP8266 yet. We will breadboard everything tomorrow and do a full day of testing.
+
+## Testing and Verification
+
+
