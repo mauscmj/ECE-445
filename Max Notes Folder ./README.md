@@ -8,7 +8,7 @@
 - [2023-02-22 - TA Meeting](#2023-02-22---ta-meeting)
 - [2023-02-22 - Individual Work](#2023-02-22---individual-work)
 - [2023-02-27 - Head TA Notes](#2023-02-27---head-ta-notes)
-- [2023-03-06 - Max + Jack Work](#2023-03-06---max---jack-work)
+- [2023-03-06 - Max and Jack Work](#2023-03-06---max-and-jack-work)
 - [2023-03-08 - TA Meeting](#2023-03-08---ta-meeting)
 - [2023-03-27 - Testing Parts](#2023-03-27---testing-parts)
 - [2023-04-04 - Testing Parts](#2023-04-04---testing-parts)
@@ -108,7 +108,7 @@
  - Make sure we add test points to PCB
  - Don't need 5V line anymore so need to find 9V LED strip instead (Vinay)
   
-# 2023-03-06 - Max + Jack Work
+# 2023-03-06 - Max and Jack Work
 - Jack finished circuit diagrams
 - Finished laying out PCB together
 - Got errors with DRC, clearance violations mostly from small pads close together
