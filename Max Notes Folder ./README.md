@@ -3,7 +3,7 @@
 
 # Table of Contents
 - [2023-02-07 - Proposal TA Meeting](#2023-02-07---proposal-ta-meeting)
-- [2023-02-15 - TA Meeting #1](#2023-02-15---ta-meeting--1)
+- [2023-02-15 - TA Meeting](#2023-02-15---ta-meeting)
 - [2023-02-20 - Team Work](#2023-02-20---team-work)
 - [2023-02-22 - TA Meeting #2](#2023-02-22---ta-meeting--2)
 - [2023-02-22 - Individual Work](#2023-02-22---individual-work)
