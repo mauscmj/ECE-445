@@ -18,7 +18,7 @@
 - [2023-04-17 - Testing Bread board pt 2.](#2023-04-17---testing-bread-board-pt-2)
 - [2023-04-19 - TA Mock Demo](#2023-04-19---ta-mock-demo)
 - [2023-04-24 - Final PCB Arrives](#2023-04-24---final-pcb-arrives)
-- [2023-04-24 - Pre Demo Testing](#2023-04-24---pre-demo-testing)
+- [2023-04-25 - Pre Demo Testing](#2023-04-25---pre-demo-testing)
 
 # 2023-02-07 - Proposal TA Meeting
 -   It was suggested that voltages be put on block diagrams to ensure clarity in the design process.
