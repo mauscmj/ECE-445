@@ -5,11 +5,11 @@
 - [2023-02-07 - Proposal TA Meeting](#2023-02-07---proposal-ta-meeting)
 - [2023-02-15 - TA Meeting](#2023-02-15---ta-meeting)
 - [2023-02-20 - Team Work](#2023-02-20---team-work)
-- [2023-02-22 - TA Meeting #2](#2023-02-22---ta-meeting--2)
+- [2023-02-22 - TA Meeting](#2023-02-22---ta-meeting)
 - [2023-02-22 - Individual Work](#2023-02-22---individual-work)
 - [2023-02-27 - Head TA Notes](#2023-02-27---head-ta-notes)
 - [2023-03-06 - Max + Jack Work](#2023-03-06---max---jack-work)
-- [2023-03-08 - TA Meeting #3](#2023-03-08---ta-meeting--3)
+- [2023-03-08 - TA Meeting](#2023-03-08---ta-meeting)
 - [2023-03-27 - Testing Parts](#2023-03-27---testing-parts)
 - [2023-04-04 - Testing Parts](#2023-04-04---testing-parts)
 - [2023-04-12/13/14 - Testing Second Round PCB pt.1](#2023-04-12-13-14---testing-second-round-pcb-pt1)
@@ -30,7 +30,7 @@
 -  Need to get proposal submitted
 -  Meet weekly Wednesday from 2-3pm
 
-# 2023-02-15 - TA Meeting #1
+# 2023-02-15 - TA Meeting
 
   
 
@@ -60,7 +60,7 @@
 - Physical design schematics
 
 
-# 2023-02-22 - TA Meeting #2
+# 2023-02-22 - TA Meeting
 
   
 -   The revised proposal must be submitted by Thursday.
@@ -122,7 +122,7 @@
 - Teammate Evaluation
 - Get part order in
 - Wait for PCB...
-# 2023-03-08 - TA Meeting #3
+# 2023-03-08 - TA Meeting
 - Space out our PCB board more, no need to optimize yet
 - Maybe use 6 pin connector to program instead of USB?
 - Put resistors horizontal and capacitors vertical
