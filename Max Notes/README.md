@@ -263,3 +263,5 @@
 - Final board:
 <img src="final_board.jpg" alt= “” width="50%" height="50%">
 <img src="final_pcb.jpg" alt= “” width="50%" height="50%">
+<img src="final_led.jpg" alt= “” width="50%" height="50%">
+
