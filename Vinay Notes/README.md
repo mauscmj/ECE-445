@@ -11,9 +11,9 @@
 - [4/12/2023](#2nd-round-pcb-test)
 - [4/13/2023](#breadboarding-circuit-and-programming-microcontroller)
 - [4/16/2023](#testing-and-verification)
-- [4/17/2023](#mock-demo)
+- [4/19/2023](#mock-demo)
 - [4/24/2023](#pcb-integration-and-final-demo)
-- [5/1/2023](#final-presentation)
+- [4/27/2023](#mock-presentation)
 
 ## Project Proposal Notes
 List of ideas that we have brainstormed:
@@ -231,5 +231,75 @@ Note: L293D motor controller works! We picked up the order today and it was much
 Note: Was able to test with manual power but not necessarily with the ESP8266 yet. We will breadboard everything tomorrow and do a full day of testing.
 
 ## Testing and Verification
+Note: Breadboard is now fully assembled now we are testing if it works.
 
+Note: It drives the motor however the weight at the bottom of the curtain is too heavy. We cut it off and taped 3 quarters to the bottom curtain to maintain a decent amount of the weight to reduce slack
+
+Note: Changed PWM to max drive. When it unwinds it goes faster than when it winds the curtain up. Lets change the PWM so it goes at relatively the same speed both up and down.
+
+Note: Button test works and moves motor up and down.
+
+Note: Testing the photoresistor part of circuit is buggy. Used multimeter to see if photoresistor was working and verified it was.
+
+Note: we found out our pin wasnt reading the signal. Seems like it could either being forced low or high. Or the pin was blownout?
+
+Note: we switched to a different pin and it worked. Found out the previous pin was ADC channel 2 which, when the chip uses WIFI, cannot be used for reading inputs.
+
+Note: ESP was lighting the LEDS for a bit but then I think we powered a bad pin. Getting brownout error in serial console. We gotta order a lot more devkits this keeps happening.
+
+Note: New one on the way.
+
+Note: Next Day and we have the new ESP32. Light circuit full works. Next thing to do is create wifi automation code.
+
+Note: We had an existing homekit codebase for the ESP8266 that worked but with ESP32 the code is a little more confusing.
+
+Note: we were able to do some digging and found and opensource code for Apple homekit motor control. Allows us to open and close the curtain from a 0% open position to a 100% open position. 
+
+Note: Wrote some extra logic for the manual button to turn the curtain to certain position based on the percentage of openness the curtain is set at by the homekit software.
+
+Note: We added logic to the LED such that when the curtain is closed, there should be no additional LED light even if there is not enough light in the room. When the curtain is closed we assume the user wants the lights to be off.
+
+Note: Final test is to make sure all this wifi stuff works over a local network for Demo purposes (since we cant connect external devices to IllinoisNet), we use Jacks router and it work!
+
+Note: Testing Alarm home automation also works as well!.
+
+Note: Last Steps are to get the final PCB order that is based on our new breadboard and build a clean Demo setup. Also collect data on a spreadsheet for our Testing and Verification stuff.
+
+![tests](breadboard.jpg)
+
+## Mock Demo
+
+Note: Have a technical introduction
+
+Note: go through demo prior to final demo
+
+Note: Use the alarm to demonstrate the coolest feature of the product
+
+Note: Show the challenges and demonstrate the difficulty of building the product.
+
+![mockdemo](mockdemo.jpg)
+
+## PCB Integration and Final Demo
+
+Note: PCB has arrived. We tested everything and it works. Eureka! We also made sure to collect all our data and make sure all the requirements have been met.
+
+Note: Used foam boards to cut out a compartment for the pcb housing
+
+Note: cut out wire holes on either side of the box.
+
+Note: used velcro pads to mount the PCB to the board
+
+Note: hotglued everything else to the board
+
+Note: used electrical tape to seal up exposed wire
+
+Note: Ziptied motor to secure to the board.
+
+![finaldemo](final_demo.jpg)
+
+## Mock Presentation
+
+Note: These were some of the feedback we wrote down/recieved for our presentation:
+![presentation notes](mock_presentation.jpg)
+![presentation_notes](mock_presentation2.jpg)
 
