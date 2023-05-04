@@ -1,2 +1,0 @@
-https://mechatronicsblog.com/esp8266-nodemcu-pinout-for-arduino-ide/
-https://randomnerdtutorials.com/esp8266-pwm-arduino-ide/
